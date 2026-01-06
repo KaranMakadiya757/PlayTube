@@ -7,7 +7,7 @@ const Theme = createTheme({
                 body: {
                     backgroundColor: "var(--bg)",
                     color: "var(--text)",
-                    fontFamily: "'Inter', sans-serif",
+                    fontFamily: "'Roboto', sans-serif",
                     fontSize: "clamp(12px, 1vw + 1em, 16px)",
                     lineHeight: 1,
                     minHeight: "100vh",
