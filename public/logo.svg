@@ -6,13 +6,24 @@
     </linearGradient>
   </defs>
 
-  <rect width="512" height="512" fill="#121212" />
+  <!-- Filled background INSIDE the border -->
+  <rect x="66" y="116" width="380" height="280"
+        rx="90" ry="90"
+        fill="#121212" />
 
-  <rect x="66" y="116" width="380" height="280" rx="90" ry="90" 
-        fill="none" stroke="url(#logoGradient)" stroke-width="18" />
+  <!-- Border -->
+  <rect x="66" y="116" width="380" height="280"
+        rx="90" ry="90"
+        fill="none"
+        stroke="url(#logoGradient)"
+        stroke-width="18" />
 
   <path d="M225,215 L285,256 L225,297 Z" fill="url(#logoGradient)" />
 
-  <path d="M225,195 L310,256 L225,317" 
-        fill="none" stroke="#FFFFFF" stroke-width="15" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M225,195 L310,256 L225,317"
+        fill="none"
+        stroke="#FFFFFF"
+        stroke-width="15"
+        stroke-linecap="round"
+        stroke-linejoin="round" />
 </svg>
