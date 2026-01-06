@@ -9,7 +9,7 @@
   <!-- Filled background INSIDE the border -->
   <rect x="66" y="116" width="380" height="280"
         rx="90" ry="90"
-        fill="#121212" />
+        fill="#2d2d2d" />
 
   <!-- Border -->
   <rect x="66" y="116" width="380" height="280"
