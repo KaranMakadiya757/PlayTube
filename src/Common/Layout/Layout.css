@@ -1,0 +1,222 @@
+.outlet {
+    flex-grow: 1;
+    padding: max(8rem, 70px) 1rem 1rem;
+    height: 100%;
+    max-height: 100svh;
+    overflow: auto;
+    box-sizing: border-box;
+}
+
+.drawerlist {
+    height: 100%;
+    padding: 1rem;
+
+    .logo {
+        max-width: 150px;
+    }
+
+    .close {
+        padding: 0;
+
+        .MuiSvgIcon-root {
+            color: var(--text);
+            font-size: 1.75rem;
+        }
+    }
+
+    .MuiDivider-root {
+        border-color: #9797978c;
+    }
+}
+
+.sub_list,
+.play_list {
+    display: grid;
+    gap: 2px;
+    padding: 0 !important;
+
+    .MuiButtonBase-root.MuiListItemButton-root {
+        padding: 5px 16px;
+        min-height: 0;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        width: fit-content;
+        gap: 1rem;
+        border-radius: 0.5rem;
+        background-color: transparent;
+    }
+
+    .listbutton.Mui-selected,
+    .listbutton:hover,
+    .listbutton:hover.Mui-selected {
+        background-color: var(--selected);
+    }
+
+    .listicon {
+        min-width: 0;
+    }
+
+    .avatar {
+        height: 25px;
+        width: 25px;
+    }
+
+    .listtext .MuiTypography-root {
+        font-family: "Roboto", sans-serif;
+        font-weight: 400;
+        font-size: 0.75rem;
+        line-height: 1;
+        letter-spacing: 0em;
+        color: var(--text);
+    }
+
+    .listtext2 .MuiTypography-root {
+        font-family: "Roboto", sans-serif;
+        font-weight: 400;
+        font-size: 0.75rem;
+        opacity: 0.5;
+        text-align: right;
+        line-height: 1;
+        letter-spacing: 0em;
+        color: var(--text);
+    }
+}
+
+.menulist {
+    display: grid;
+    gap: 2px;
+
+    .MuiButtonBase-root.MuiListItemButton-root {
+        min-height: 48px;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        width: fit-content;
+        border-radius: 0.5rem;
+        background-color: transparent;
+    }
+
+    .listbutton.open {
+        justify-content: initial;
+    }
+
+    .listbutton.Mui-selected,
+    .listbutton:hover,
+    .listbutton:hover.Mui-selected {
+        background-color: var(--selected);
+    }
+
+    .listicon {
+        min-width: 0;
+        max-height: 25px;
+        margin-right: auto;
+        justify-content: center;
+        margin-right: 1rem;
+        color: var(--text);
+    }
+
+    .listtext {
+        opacity: 0;
+    }
+
+    .listtext.open {
+        opacity: 1;
+    }
+
+    .listtext .MuiTypography-root {
+        font-family: "Roboto", sans-serif;
+        font-weight: 600;
+        font-size: 1rem;
+        line-height: 1;
+        letter-spacing: 0em;
+        color: var(--text);
+    }
+}
+
+.drawer_open.MuiDrawer-root {
+    z-index: 1300;
+    box-shadow: none;
+    width: 15%;
+    min-width: 250px;
+    height: 100vh;
+
+    .MuiPaper-root {
+        background-color: var(--bg);
+        width: 15%;
+        min-width: 250px;
+        border-right: none;
+    }
+
+    ::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.drawer_close.MuiDrawer-root {
+    .MuiPaper-root {
+        border-right: none;
+        width: 0;
+    }
+}
+
+.app-bar.MuiAppBar-root {
+    width: 85%;
+    max-width: calc(100% - 300px);
+    background-color: var(--bg);
+    box-shadow: none;
+    display: flex;
+    align-items: end;
+}
+
+.app-bar.collapsed {
+    width: 100%;
+    max-width: none;
+}
+
+.toolbar.MuiToolbar-root {
+    width: 100%;
+    border-radius: 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    position: relative;
+
+    .avatar {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translate(0, -50%);
+        cursor: pointer;
+    }
+
+    .searchbar {
+        width: 50%;
+    }
+
+    .searchbar .MuiOutlinedInput-root {
+        border-radius: 1.5rem;
+        margin-bottom: 0;
+
+        &.Mui-focused .MuiOutlinedInput-notchedOutline {
+            border-color: var(--border);
+        }
+    }
+
+}
+
+@media (max-width: 599.95px) {
+    .app-bar.MuiAppBar-root {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.18),
+            inset 0 0 0 2px rgba(255, 255, 255, 0.05);
+    }
+
+    .menulist {
+        .listtext .MuiTypography-root {
+            font-size: 1.5rem;
+        }
+    }
+}

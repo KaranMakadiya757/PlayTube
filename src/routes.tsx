@@ -1,6 +1,7 @@
 import { lazy } from "react";
 import { createBrowserRouter } from "react-router-dom";
-import { LogGuard } from './Common/Protected Routes/AuthGuard';
+import { AuthGuard, LogGuard } from './Common/Protected Routes/AuthGuard';
+import Layout from "./Common/Layout/Layout";
 
 // -------------------------------------- Authentication Pages --------------------------------------
 
@@ -28,5 +29,12 @@ export const Routes = createBrowserRouter([
     {
         path: "/sign-up",
         element: <LogGuard><Signup /> </LogGuard >
+    },
+
+    // Dashboard Layout
+    {
+        path: "/",
+        element: <AuthGuard><Layout /></AuthGuard>,
+        children: []
     }
 ]);
