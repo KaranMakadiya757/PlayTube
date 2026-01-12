@@ -28,15 +28,12 @@ const Layout = () => {
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
 
+    const selected: MenuItems = (menuList.find((menu) => menu.id === location.pathname.split("/")[1])?.id as MenuItems) ?? "home";
+
     const [open, setOpen] = useState(() => !isMobile);
-    // const [logoutconfirm, setlogoutconfirm] = useState(false);
-    const selected: MenuItems =
-        (menuList.find((menu) => menu.id === location.pathname.split("/")[1])?.id as MenuItems) ??
-        "home";
+
 
     /* ------------------------------------------------- APIs ------------------------------------------------- */
-
-
     /* ------------------------------------------------- Functions ------------------------------------------------- */
 
     const handleSelect = (menu: MenuItemBase, id?: string | number) => {
@@ -125,8 +122,8 @@ const Layout = () => {
                                     </ListItem>
                                 </List>
 
-                                {subscriptions.map((sub) =>
-                                    <List className='sub_list'>
+                                <List className='sub_list'>
+                                    {subscriptions.map((sub) =>
                                         <ListItem key={sub.id} disablePadding>
                                             <ListItemButton
                                                 className="listbutton"
@@ -138,8 +135,8 @@ const Layout = () => {
                                                 <ListItemText primary={sub.name} className='listtext' />
                                             </ListItemButton>
                                         </ListItem>
-                                    </List>
-                                )}
+                                    )}
+                                </List>
                             </Grid>
                             <Grid size={{ xs: 12 }}><Divider /></Grid>
 
@@ -160,8 +157,8 @@ const Layout = () => {
                                     </ListItem>
                                 </List>
 
-                                {playlists.map((item) =>
-                                    <List className='play_list'>
+                                <List className='play_list'>
+                                    {playlists.map((item) =>
                                         <ListItem key={item.id} disablePadding>
                                             <ListItemButton
                                                 className="listbutton"
@@ -171,8 +168,8 @@ const Layout = () => {
                                                 <ListItemText primary={`${item.videos} Videos`} className='listtext2' />
                                             </ListItemButton>
                                         </ListItem>
-                                    </List>
-                                )}
+                                    )}
+                                </List>
                             </Grid>
                             <Grid size={{ xs: 12 }}><Divider /></Grid>
 
@@ -205,11 +202,6 @@ const Layout = () => {
                     </Suspense>
                 </Box>
             </Box>
-            {/* <LogoutConfirmationPopup
-                open={logoutconfirm}
-                setOpen={setlogoutconfirm}
-                handleLogout={handleLogout}
-            /> */}
         </Box>
     );
 }
