@@ -2,6 +2,13 @@ import { lazy } from "react";
 import { createBrowserRouter } from "react-router-dom";
 import { AuthGuard, LogGuard } from './Common/Protected Routes/AuthGuard';
 import Layout from "./Common/Layout/Layout";
+import Home from "./Pages/Home/Home";
+import Video from "./Pages/Videos/Video";
+import Settings from "./Pages/Settings/Settings";
+import Profile from "./Pages/Profile/Profile";
+import SubscriptionList from "./Pages/Subscriptions/SubscriptionList";
+import Playlist from "./Pages/Playlists/Playlist";
+import PlaylistList from "./Pages/Playlists/PlaylistList";
 
 // -------------------------------------- Authentication Pages --------------------------------------
 
@@ -35,6 +42,43 @@ export const Routes = createBrowserRouter([
     {
         path: "/",
         element: <AuthGuard><Layout /></AuthGuard>,
-        children: []
+        children: [
+            {
+                path: "",
+                element: <Home />,
+            },
+            {
+                path: "search",
+                element: <Home />,
+            },
+            {
+                path: "video",
+                element: <Video />,
+            },
+            {
+                path: "settings",
+                element: <Settings />,
+            },
+            {
+                path: "my-profile",
+                element: <Profile />,
+            },
+            {
+                path: "subscriptions",
+                element: <SubscriptionList />,
+            },
+            {
+                path: "subscriptions/:id",
+                element: <Profile />,
+            },
+            {
+                path: "playlists",
+                element: <PlaylistList />,
+            },
+            {
+                path: "playlists/:id",
+                element: <Playlist />,
+            },
+        ]
     }
 ]);

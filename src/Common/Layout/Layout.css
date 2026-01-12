@@ -1,6 +1,6 @@
 .outlet {
     flex-grow: 1;
-    padding: max(8rem, 70px) 1rem 1rem;
+    padding: max(5rem, 80px) 1rem 1rem;
     height: 100%;
     max-height: 100svh;
     overflow: auto;
@@ -9,10 +9,10 @@
 
 .drawerlist {
     height: 100%;
-    padding: 1rem;
+    padding: 0.25rem 1rem;
 
     .logo {
-        max-width: 150px;
+        max-width: 120px;
     }
 
     .close {
@@ -20,7 +20,7 @@
 
         .MuiSvgIcon-root {
             color: var(--text);
-            font-size: 1.75rem;
+            font-size: 1.5rem;
         }
     }
 
@@ -190,6 +190,20 @@
         cursor: pointer;
     }
 
+    .menu_toggle {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translate(0, -50%);
+        cursor: pointer;
+    }
+
+    .logo {
+        max-width: 120px;
+    }
+
     .searchbar {
         width: 50%;
     }
@@ -218,5 +232,62 @@
         .listtext .MuiTypography-root {
             font-size: 1.5rem;
         }
+    }
+}
+
+.profile_menu_popup {
+    .MuiMenu-paper {
+        background-color: var(--card-bg);
+        margin-top: 1rem;
+        border-radius: 1rem;
+        box-shadow: var(--shadow);
+        padding: 0.5rem;
+    }
+
+    .MuiMenu-list {
+        display: grid;
+        gap: 0.5rem;
+    }
+
+    .MuiSvgIcon-root {
+        font-size: 1.5rem;
+        padding-left: 3px;
+    }
+
+    .profile_menu {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-family: "Roboto", sans-serif;
+        color: var(--text);
+        background-color: transparent;
+        font-size: 1rem;
+        border-radius: 0.5rem;
+        line-height: 1.5;
+
+        &.toggle {
+            justify-content: space-between;
+        }
+
+        &:hover {
+            box-shadow: var(--shadow);
+            border: none;
+            background-color: var(--selected);
+        }
+
+        &.toggle:hover {
+            box-shadow: none;
+            border: none;
+            background-color: transparent;
+        }
+    }
+
+    .Mui-checked+.MuiSwitch-track {
+        background-color: var(--selected) !important;
+        box-shadow: var(--shadow);
+    }
+
+    .MuiSwitch-switchBase.Mui-checked {
+        color: var(--text);
     }
 }

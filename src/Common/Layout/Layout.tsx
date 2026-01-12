@@ -31,7 +31,7 @@ const Layout = () => {
     const [open, setOpen] = useState(() => !isMobile);
     // const [logoutconfirm, setlogoutconfirm] = useState(false);
     const selected: MenuItems =
-        (menuList.find((menu) => menu.id === location.pathname.split("/")[2])?.id as MenuItems) ??
+        (menuList.find((menu) => menu.id === location.pathname.split("/")[1])?.id as MenuItems) ??
         "home";
 
     /* ------------------------------------------------- APIs ------------------------------------------------- */
@@ -56,14 +56,6 @@ const Layout = () => {
     const handleDrawerClose = () => {
         setOpen(false);
     };
-
-    // const handleLogout = () => {
-    //     Cookies.remove("refreshToken");
-    //     Cookies.remove("accessToken");
-    //     Cookies.remove("user");
-    //     localStorage.clear();
-    //     nav("/");
-    // }
 
     /* ------------------------------------------------- Return ------------------------------------------------- */
 
@@ -137,7 +129,6 @@ const Layout = () => {
                                     <List className='sub_list'>
                                         <ListItem key={sub.id} disablePadding>
                                             <ListItemButton
-                                                selected={selected === menuList[1].id}
                                                 className="listbutton"
                                                 onClick={() => handleSelect(menuList[1], sub.id)}
                                             >
@@ -173,9 +164,8 @@ const Layout = () => {
                                     <List className='play_list'>
                                         <ListItem key={item.id} disablePadding>
                                             <ListItemButton
-                                                selected={selected === menuList[1].id}
                                                 className="listbutton"
-                                                onClick={() => handleSelect(menuList[1], item.id)}
+                                                onClick={() => handleSelect(menuList[2], item.id)}
                                             >
                                                 <ListItemText primary={item.name} className='listtext' />
                                                 <ListItemText primary={`${item.videos} Videos`} className='listtext2' />

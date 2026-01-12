@@ -9,7 +9,6 @@ function App() {
     const applyTheme = () => {
       const isDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
       document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light');
-      // document.documentElement.setAttribute('data-theme', isDark ? 'light' : 'dark');
     };
 
     applyTheme();
