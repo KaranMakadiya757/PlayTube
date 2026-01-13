@@ -1,0 +1,63 @@
+.video_card.MuiCard-root {
+    background-color: transparent;
+    box-shadow: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    display: grid;
+    gap: 1rem;
+
+    &:hover {
+        background-color: var(--selected);
+    }
+
+    .video_image {
+        position: relative;
+    }
+
+    .MuiCardMedia-root {
+        border-radius: 1rem;
+    }
+
+    .MuiCardContent-root {
+        display: flex;
+        gap: 0.5rem;
+        padding: 0;
+    }
+
+    .MuiAvatar-root {
+        height: 25px;
+        width: 25px;
+    }
+
+    .MuiTypography-root.title {
+        font-weight: 500;
+        font-size: 0.85rem;
+        color: var(--text);
+    }
+
+    .MuiTypography-root.subtitle {
+        font-weight: 400;
+        font-size: 0.7rem;
+        margin-bottom: 0.25rem;
+        color: var(--secondary-text);
+    }
+
+    .MuiTypography-root.time {
+        position: absolute;
+        right: 3%;
+        bottom: 3%;
+        font-weight: 400;
+        font-size: 0.7rem;
+        color: white;
+        background-color: black;
+        padding: 0.15rem 0.25rem;
+        border-radius: 0.25rem;
+        margin-bottom: 0;
+    }
+
+    .more {
+        color: var(--text);
+        font-size: 1rem;
+    }
+}
