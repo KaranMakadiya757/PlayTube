@@ -61,7 +61,7 @@ export const Routes = createBrowserRouter([
             },
             {
                 path: "my-profile",
-                element: <Profile />,
+                element: <Profile type="user" />,
             },
             {
                 path: "subscriptions",
@@ -69,7 +69,7 @@ export const Routes = createBrowserRouter([
             },
             {
                 path: "subscriptions/:id",
-                element: <Profile />,
+                element: <Profile type="channel" />,
             },
             {
                 path: "playlists",

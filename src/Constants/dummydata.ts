@@ -10,6 +10,8 @@ import thumb3 from "../assets/thumb3.jpg"
 
 import videofile from "../assets/video.mp4"
 
+import cover from '../assets/cover.jpg'
+
 export const subscriptions = [
     {
         id: 1,
@@ -153,4 +155,28 @@ export const comment = {
     },
     createdAt: "2025-07-17T09:09:15.590Z",
     updatedAt: "2025-07-17T09:13:20.743Z"
+}
+
+export const user_profile = {
+    _id: "6877783b96d2911f18da02b0",
+    username: "Taarak Mehta Ka Ooltah Chashmah",
+    email: "karanmakadiya87@gmail.com",
+    fullname: "Karan Makadiya",
+    avatar: u5,
+    coverimage: cover,
+    subscribersCount: 1000000,
+    channelCount: 0,
+    isubscribed: false
+}
+
+export const channel_profile = {
+    _id: "6877783b96d2911f18da02b0",
+    username: "Taarak Mehta Ka Ooltah Chashmah",
+    email: "karanmakadiya87@gmail.com",
+    fullname: "Karan Makadiya",
+    avatar: u5,
+    coverimage: cover,
+    subscribersCount: 1000000,
+    channelCount: 0,
+    isubscribed: false
 }

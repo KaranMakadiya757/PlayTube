@@ -1,0 +1,14 @@
+.profile_page {
+    display: flex;
+    justify-content: center;
+
+    .cover_image {
+        width: 100%;
+        border-radius: 1rem;
+    }
+
+    .avatar_image {
+        height: 10rem;
+        width: 10rem;
+    }
+}

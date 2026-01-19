@@ -18,6 +18,27 @@
     border-color: var(--secondary-text) !important;
 }
 
+.MuiButtonBase-root.MuiTab-root {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 0.875rem;
+    text-transform: capitalize;
+    min-width: 0;
+    min-height: 3rem;
+}
+
+.MuiButtonBase-root.MuiTab-root.Mui-selected {
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
+    font-size: 0.875rem;
+    color: var(--text);
+}
+
+.MuiTabs-indicator {
+    height: 2px !important;
+    background-color: var(--text) !important;
+}
+
 .menu_popup {
     .MuiMenu-paper {
         background-color: var(--card-bg);
