@@ -52,7 +52,7 @@ export const Routes = createBrowserRouter([
                 element: <Home />,
             },
             {
-                path: "video",
+                path: "video/:id",
                 element: <Video />,
             },
             {

@@ -2,7 +2,7 @@ import { styled } from '@mui/material/styles';
 import type { AppBarProps as MuiAppBarProps } from '@mui/material/AppBar';
 import { AppBar as MuiAppBar } from '@mui/material';
 
-// const drawerWidth = 240;
+export const fullscreen_menus = ["video"];
 
 export const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' })<{
     open?: boolean;
