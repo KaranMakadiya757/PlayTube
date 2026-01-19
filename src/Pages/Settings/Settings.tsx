@@ -1,8 +1,9 @@
+import WorkProgress from "../../Common/Components/Work In Progress/WorkProgress"
 import "./Settings.css"
 
 const Settings = () => {
     return (
-        <div>Settings</div>
+        <WorkProgress />
     )
 }
 
