@@ -128,15 +128,15 @@ const Layout = () => {
 
                                 <List className='sub_list'>
                                     {subscriptions.map((sub) =>
-                                        <ListItem key={sub.id} disablePadding>
+                                        <ListItem key={sub.channel._id} disablePadding>
                                             <ListItemButton
                                                 className="listbutton"
-                                                onClick={() => handleSelect(menuList[1], sub.id)}
+                                                onClick={() => handleSelect(menuList[1], sub.channel._id)}
                                             >
                                                 <ListItemIcon className="listicon">
-                                                    <Avatar className='avatar' src={sub.img} />
+                                                    <Avatar className='avatar' src={sub.channel.avatar} />
                                                 </ListItemIcon>
-                                                <ListItemText primary={sub.name} className='listtext' />
+                                                <ListItemText primary={sub.channel.username} className='listtext' />
                                             </ListItemButton>
                                         </ListItem>
                                     )}

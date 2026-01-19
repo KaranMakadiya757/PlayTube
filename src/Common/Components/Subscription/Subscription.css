@@ -1,0 +1,62 @@
+.subscription_card.MuiCard-root {
+    background-color: transparent;
+    box-shadow: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    &:hover {
+        background-color: var(--selected);
+    }
+
+    .subscription_image {
+        display: flex;
+        justify-content: center;
+    }
+
+    .MuiAvatar-root {
+        height: 8rem;
+        width: 8rem;
+    }
+
+    .MuiCardContent-root {
+        width: 100%;
+        display: flex;
+        gap: 0.5rem;
+        padding: 0;
+    }
+
+    .MuiTypography-root.title {
+        font-weight: 500;
+        font-size: 1.5rem;
+        color: var(--text);
+    }
+
+    .MuiTypography-root.subtitle {
+        font-weight: 400;
+        font-size: 0.7rem;
+        margin-bottom: 0.25rem;
+        color: var(--secondary-text);
+    }
+
+    .MuiTypography-root.time {
+        position: absolute;
+        right: 3%;
+        bottom: 3%;
+        font-weight: 400;
+        font-size: 0.7rem;
+        color: white;
+        background-color: black;
+        padding: 0.15rem 0.25rem;
+        border-radius: 0.25rem;
+        margin-bottom: 0;
+    }
+
+    .more {
+        color: var(--text);
+        font-size: 1rem;
+    }
+}
