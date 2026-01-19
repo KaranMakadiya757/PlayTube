@@ -55,19 +55,37 @@ const Theme = createTheme({
                 h1: {
                     fontWeight: 700,
                     fontSize: "clamp(1.9rem, 1.5rem + 1vw, 2.5rem)",
-                    color: "var(--primary-text)",
+                    color: "var(--text)",
                     marginBottom: "0.5em",
                 },
                 h2: {
                     fontWeight: 600,
                     fontSize: "clamp(1.6rem, 1.3rem + 0.8vw, 2.1rem)",
-                    color: "var(--primary-text)",
+                    color: "var(--text)",
                     marginBottom: "0.5em",
                 },
                 h3: {
-                    fontWeight: 600,
+                    fontWeight: 500,
                     fontSize: "clamp(1.3rem, 1.1rem + 0.6vw, 1.8rem)",
-                    color: "var(--primary-text)",
+                    color: "var(--text)",
+                    marginBottom: "0.5em",
+                },
+                h4: {
+                    fontWeight: 400,
+                    fontSize: "clamp(1.1rem, 1rem + 0.4vw, 1.3rem)",
+                    color: "var(--text)",
+                    marginBottom: "0.5em",
+                },
+                h5: {
+                    fontWeight: 400,
+                    fontSize: "clamp(1rem, 0.95rem + 0.3vw, 1.15rem)",
+                    color: "var(--text)",
+                    marginBottom: "0.5em",
+                },
+                h6: {
+                    fontWeight: 400,
+                    fontSize: "clamp(0.8rem, 0.9rem + 0.2vw, 0.9rem)",
+                    color: "var(--text)",
                     marginBottom: "0.5em",
                 },
                 subtitle1: {
@@ -185,6 +203,10 @@ const Theme = createTheme({
                         opacity: 0.6
                     },
 
+                    "&.rounded": {
+                        borderRadius: "2rem",
+                    },
+
                     "&.Mui-disabled": {
                         opacity: 0.5,
                         cursor: "not-allowed",
@@ -203,7 +225,7 @@ const Theme = createTheme({
                     "&:hover": {
                         boxShadow: "none"
                     }
-                },
+                }
             },
         },
     },

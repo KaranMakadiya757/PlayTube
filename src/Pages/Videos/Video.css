@@ -1,0 +1,91 @@
+.video {
+    .video_player {
+        width: 100% !important;
+        height: 70svh !important;
+        border-radius: 1rem;
+        outline: none;
+    }
+
+    .react-player__preview {
+        width: 100% !important;
+        height: 70svh !important;
+        border-radius: 1rem;
+    }
+
+    .avatar.MuiAvatar-root {
+        height: 35px;
+        width: 35px;
+    }
+
+    .user_avatar.MuiAvatar-root {
+        height: 25px;
+        width: 25px;
+    }
+
+    .comment_avatar.MuiAvatar-root {
+        height: 25px;
+        width: 25px;
+        margin-top: 0.25rem;
+    }
+
+    .description {
+        padding: 1rem;
+        background-color: var(--card-bg);
+        border-radius: 1rem;
+    }
+
+    .MuiInputBase-root.MuiOutlinedInput-root {
+        margin-bottom: 0;
+        border-radius: 1.5rem;
+    }
+
+    .comment.MuiButtonBase-root.MuiButton-root {
+        font-size: clamp(0.6rem, 0.85rem + 0.3vw, 0.9rem);
+        padding: 0.2rem 1rem !important;
+    }
+
+    .comments_list {
+        .MuiListItemIcon-root {
+            min-width: 0;
+        }
+
+        .MuiListItem-root {
+            display: flex;
+            align-items: start;
+            gap: 1rem;
+        }
+
+        .chip_button {
+            padding: 0.25rem 0.75rem;
+            margin-top: 0.6rem;
+        }
+
+        .MuiListItemText-root {
+            flex-grow: 0;
+        }
+
+        .title .MuiTypography-root {
+            font-size: 0.9rem;
+            color: var(--text);
+            font-weight: 600;
+        }
+
+        .time .MuiTypography-root {
+            font-size: 0.8rem;
+            color: var(--secondary-text);
+            font-weight: 400;
+        }
+
+        .content .MuiTypography-root {
+            font-size: 0.9rem;
+            color: var(--text);
+            font-weight: 400;
+        }
+
+        .likes .MuiTypography-root {
+            font-size: 0.75rem;
+            color: var(--text);
+            font-weight: 400;
+        }
+    }
+}

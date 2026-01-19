@@ -8,7 +8,7 @@ import { useNavigate } from "react-router-dom"
 import { Check, ContentCopy, Download, MoreVert, Share } from "@mui/icons-material"
 import { useState } from "react"
 
-const VideoCard = ({ video }: { video: Video }) => {
+const VideoCard = ({ video, type = "card" }: { video: Video, type?: "card" | "list" }) => {
 
     /* ------------------------------------------------- Constants ------------------------------------------------- */
 
@@ -87,7 +87,7 @@ const VideoCard = ({ video }: { video: Video }) => {
     return (
         <>
             <CardActionArea onClick={handleCardClick}>
-                <Card className="video_card">
+                <Card className={`video_card ${type}`}>
                     <Box className="video_image">
                         <CardMedia
                             component="img"
@@ -99,9 +99,9 @@ const VideoCard = ({ video }: { video: Video }) => {
                     </Box>
 
                     <CardContent>
-                        <Box component={"span"} onClick={handleSubclick}>
+                        {type !== "list" && <Box component={"span"} onClick={handleSubclick}>
                             <Avatar src={video.owner.avatar} />
-                        </Box>
+                        </Box>}
 
                         <Box flexGrow={1}>
                             <Typography className="title">

@@ -18,3 +18,13 @@ export interface Video {
     updatedAt: string;
     likes: number;
 }
+
+export interface VideoComment {
+    _id: string;
+    content: string;
+    likes: number;
+    owner: VideoOwner;
+    createdAt: string;
+    updatedAt: string;
+}
+

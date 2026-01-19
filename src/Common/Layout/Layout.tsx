@@ -15,6 +15,7 @@ import { DrawerHeader } from '../../Constants/Layout.constants';
 import type { MenuItems, MenuItemBase } from '../../Types/Layout.types';
 
 import { playlists, subscriptions } from "../../Constants/dummydata"
+import { fullscreen_menus } from "../../Constants/Layout.constants"
 
 import "./Layout.css"
 
@@ -24,14 +25,16 @@ const Layout = () => {
 
     const nav = useNavigate();
     const location = useLocation();
+    const isFullscreen = fullscreen_menus.includes(location.pathname.split("/")[1])
 
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
 
     const selected: MenuItems = (menuList.find((menu) => menu.id === location.pathname.split("/")[1])?.id as MenuItems) ?? "home";
 
-    const [open, setOpen] = useState(() => !isMobile);
+    const [open, setOpen] = useState(!isMobile && !isFullscreen);
 
+    const drawerOpen = isFullscreen ? false : open;
 
     /* ------------------------------------------------- APIs ------------------------------------------------- */
     /* ------------------------------------------------- Functions ------------------------------------------------- */
@@ -54,6 +57,7 @@ const Layout = () => {
         setOpen(false);
     };
 
+    /* ------------------------------------------------- useEffect ------------------------------------------------- */
     /* ------------------------------------------------- Return ------------------------------------------------- */
 
     return (
@@ -62,15 +66,15 @@ const Layout = () => {
                 <CssBaseline />
 
                 <Header
-                    open={open}
+                    open={drawerOpen}
                     handleDrawerOpen={handleDrawerOpen}
                 />
 
                 <Drawer
-                    className={`drawer${open ? '_open' : '_close'}`}
-                    variant={isMobile ? "temporary" : "persistent"}
+                    className={`drawer${drawerOpen ? '_open' : '_close'}`}
+                    variant={(isMobile || isFullscreen) ? "temporary" : "persistent"}
                     anchor="left"
-                    open={open}
+                    open={drawerOpen}
                     onClose={handleDrawerClose}
                 >
                     <Box component={"div"} className='drawerlist'>
