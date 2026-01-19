@@ -1,9 +1,19 @@
-import WorkProgress from "../../Common/Components/Work In Progress/WorkProgress"
+import { Grid } from "@mui/material"
 import "./Subscription.css"
+import { subscriptions } from "../../Constants/dummydata"
+import SubscriptionCard from "../../Common/Components/Subscription/SubscriptionCard"
 
 const SubscriptionList = () => {
     return (
-        <WorkProgress />
+        <>
+            <Grid container spacing={2}>
+                {subscriptions.map(sub =>
+                    <Grid size={{ xs: 4 }}>
+                        <SubscriptionCard Subscription={sub} />
+                    </Grid>
+                )}
+            </Grid>
+        </>
     )
 }
 

@@ -14,29 +14,54 @@ import cover from '../assets/cover.jpg'
 
 export const subscriptions = [
     {
-        id: 1,
-        img: u1,
-        name: "Carryminati"
+        _id: 1,
+        channel: {
+            _id: "1",
+            username: "Carryminati",
+            fullname: "Ajay Nagar",
+            subscribersCount: 25000000,
+            avatar: u1
+        }
     },
     {
-        id: 2,
-        img: u2,
-        name: "BB ki vines"
+        _id: 2,
+        channel: {
+            _id: "2",
+            username: "BB ki vines",
+            fullname: "Bhuvam Bam",
+            subscribersCount: 20000000,
+            avatar: u2
+        }
     },
     {
-        id: 3,
-        img: u3,
-        name: "ACV"
+        _id: 3,
+        channel: {
+            _id: "3",
+            username: "Ashish Chanchalani Vines",
+            fullname: "Ashish Chanchalani",
+            subscribersCount: 29000000,
+            avatar: u3
+        }
     },
     {
-        id: 4,
-        img: u4,
-        name: "Mumbiker Nikhil"
+        _id: 4,
+        channel: {
+            _id: "4",
+            username: "Mumbiker Nikhil",
+            fullname: "Nikhil Sharma",
+            subscribersCount: 4000000,
+            avatar: u4
+        }
     },
     {
-        id: 5,
-        img: u5,
-        name: "Taarak Mehta Ka Ooltah Chashmah"
+        _id: 5,
+        channel: {
+            _id: "5",
+            username: "Taarak Mehta Ka Ooltah Chashmah",
+            fullname: "Neela Tele Films",
+            subscribersCount: 4500000,
+            avatar: u5
+        }
     },
 ]
 
