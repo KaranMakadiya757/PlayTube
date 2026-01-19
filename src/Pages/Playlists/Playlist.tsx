@@ -1,8 +1,9 @@
+import WorkProgress from "../../Common/Components/Work In Progress/WorkProgress"
 import "./Playlist.css"
 
 const Playlist = () => {
     return (
-        <div>Playlist</div>
+        <WorkProgress />
     )
 }
 
