@@ -207,6 +207,11 @@ const Theme = createTheme({
                         borderRadius: "2rem",
                     },
 
+                    "&.secondary": {
+                        backgroundColor: "var(--card-bg)",
+                        color: "var(--text)",
+                    },
+
                     "&.Mui-disabled": {
                         opacity: 0.5,
                         cursor: "not-allowed",
